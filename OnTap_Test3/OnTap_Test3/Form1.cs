@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Data.SqlClient;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace OnTap_Test3
 {
@@ -164,6 +165,45 @@ namespace OnTap_Test3
 
         private void btnXuatExcel_Click(object sender, EventArgs e)
         {
+            Excel.Application excelApp = new Excel.Application();
+            Excel.Workbook excelWb = excelApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
+            Excel.Worksheet excelWS = excelWb.Worksheets[1];
+
+            Excel.Range excelRange = excelWS.Cells[1, 1];
+            excelRange.Font.Size = 16;
+            excelRange.Font.Bold = true;
+            excelRange.Font.Color = Color.Blue;
+            excelRange.Value = "DANH MỤC PHIM";
+
+            int row = 2;
+            foreach(DataRow rows in DAO.Instance.Xem().Rows)
+            {
+                excelWS.Range["A" + row].Font.Bold = true;
+                excelWS.Range["A" + row].Value = rows["TheLoai"].ToString();
+                row++;
+
+                foreach(DataRow ph in DAO.Instance.Xem().Rows)
+                {
+                    excelWS.Range["A" + row].Value = ph["MaDon"].ToString();
+                    excelWS.Range["B" + row].ColumnWidth = 50;
+                    excelWS.Range["B" + row].Value = ph["TenPhim"].ToString();
+                    excelWS.Range["C" + row].Value = ph["QuocGia"].ToString();
+                    excelWS.Range["D" + row].Value = ph["TheLoai"].ToString();
+                    excelWS.Range["E" + row].Value = ph["NgayCongChieu"].ToString();
+                    excelWS.Range["F" + row].Value = ph["DoTuoiQuyDinh"].ToString();
+                    excelWS.Range["G" + row].Value = ph["PTGheDoi"].ToString();
+                    excelWS.Range["H" + row].Value = ph["PTDacBiet"].ToString();
+                    row++;
+                }
+            }
+            excelWS.Name = "Danh sách phim";
+            excelWb.Activate();
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                excelWb.SaveAs(saveFileDialog.FileName);
+            excelApp.Quit();
+            MessageBox.Show("Đã xuất file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }
