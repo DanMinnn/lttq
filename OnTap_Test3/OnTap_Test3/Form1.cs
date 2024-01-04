@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using System.Data.SqlClient;
 
 namespace OnTap_Test3
 {
@@ -142,6 +143,28 @@ namespace OnTap_Test3
                    + "Tổng giá vé phim 3D: " + tongDoanhThu3D.ToString("N2") + " VNĐ";
 
             MessageBox.Show(message, "Thống kê nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnXuatBc_Click(object sender, EventArgs e)
+        {
+            bc dataset = new bc();
+            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-DANGMIN;Initial Catalog=QuanLyDoanhThu;Integrated Security=True");
+            connection.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM InforFilm", connection);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dataset.SetDataSource(ds.Tables[0]);
+
+            Form2 f2 = new Form2();
+            f2.rpt.ReportSource = dataset;
+
+            f2.ShowDialog();
+
+        }
+
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

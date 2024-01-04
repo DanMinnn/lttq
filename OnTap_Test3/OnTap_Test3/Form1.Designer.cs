@@ -66,6 +66,8 @@ namespace OnTap_Test3
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.btnXuatExcel = new System.Windows.Forms.Button();
+            this.btnXuatBc = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -78,7 +80,7 @@ namespace OnTap_Test3
             this.lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTieuDe.AutoSize = true;
             this.lblTieuDe.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDe.Location = new System.Drawing.Point(113, 42);
+            this.lblTieuDe.Location = new System.Drawing.Point(172, 42);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Size = new System.Drawing.Size(895, 37);
             this.lblTieuDe.TabIndex = 0;
@@ -106,7 +108,7 @@ namespace OnTap_Test3
             this.groupBox1.Controls.Add(this.lblMaDon);
             this.groupBox1.Controls.Add(this.lblPhuThuGheDoi);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(33, 114);
+            this.groupBox1.Location = new System.Drawing.Point(92, 114);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(664, 509);
             this.groupBox1.TabIndex = 1;
@@ -312,7 +314,7 @@ namespace OnTap_Test3
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.lvPhim);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(554, 114);
+            this.groupBox2.Location = new System.Drawing.Point(613, 114);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(569, 522);
             this.groupBox2.TabIndex = 2;
@@ -366,7 +368,7 @@ namespace OnTap_Test3
             this.groupBox3.Controls.Add(this.btnLuu);
             this.groupBox3.Controls.Add(this.btnThem);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(33, 676);
+            this.groupBox3.Location = new System.Drawing.Point(92, 676);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1090, 89);
             this.groupBox3.TabIndex = 3;
@@ -433,12 +435,34 @@ namespace OnTap_Test3
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // btnXuatExcel
+            // 
+            this.btnXuatExcel.Location = new System.Drawing.Point(1186, 382);
+            this.btnXuatExcel.Name = "btnXuatExcel";
+            this.btnXuatExcel.Size = new System.Drawing.Size(137, 39);
+            this.btnXuatExcel.TabIndex = 6;
+            this.btnXuatExcel.Text = "Xuất excel";
+            this.btnXuatExcel.UseVisualStyleBackColor = true;
+            this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
+            // 
+            // btnXuatBc
+            // 
+            this.btnXuatBc.Location = new System.Drawing.Point(1188, 304);
+            this.btnXuatBc.Name = "btnXuatBc";
+            this.btnXuatBc.Size = new System.Drawing.Size(137, 39);
+            this.btnXuatBc.TabIndex = 7;
+            this.btnXuatBc.Text = "Xuất BC";
+            this.btnXuatBc.UseVisualStyleBackColor = true;
+            this.btnXuatBc.Click += new System.EventHandler(this.btnXuatBc_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1217, 777);
+            this.ClientSize = new System.Drawing.Size(1335, 777);
+            this.Controls.Add(this.btnXuatBc);
+            this.Controls.Add(this.btnXuatExcel);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -500,6 +524,8 @@ namespace OnTap_Test3
         public System.Windows.Forms.TextBox txtMaDon;
         public System.Windows.Forms.TextBox txtPTDB;
         public System.Windows.Forms.ListView lvPhim;
+        private System.Windows.Forms.Button btnXuatExcel;
+        private System.Windows.Forms.Button btnXuatBc;
     }
 }
 
