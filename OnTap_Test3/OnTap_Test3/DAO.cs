@@ -35,17 +35,17 @@ namespace OnTap_Test3
 
         public bool Save_2D(P2D p2D)
         {
-            string sql = "INSERT INTO InforFilm(MaDon, TenPhim, QuocGia, TheLoai, NgayCongChieu, DoTuoiQuyDinh, PTGheDoi) " +
-                 "VALUES (@MaDon, @TenPhim, @QuocGia, @TheLoai, @NgayCongChieu, @DoTuoiQuyDinh, @PTGheDoi )";
-            object[] prms = new object[] { p2D.maDon, p2D.tenPhim, p2D.quocGia, p2D.theLoai, p2D.ngayCongChieu, p2D.doTuoiQuiDinh, p2D.phuThuGheDoi };
+            string sql = "INSERT INTO InforFilm(MaDon, TenPhim, QuocGia, TheLoai, NgayCongChieu, DoTuoiQuyDinh, PTGheDoi, HinhAnh) " +
+                 "VALUES ( @MaDon, @TenPhim, @QuocGia, @TheLoai, @NgayCongChieu, @DoTuoiQuyDinh, @PTGheDoi, @HinhAnh )";
+            object[] prms = new object[] { p2D.maDon, p2D.tenPhim, p2D.quocGia, p2D.theLoai, p2D.ngayCongChieu, p2D.doTuoiQuiDinh, p2D.phuThuGheDoi, p2D.hinhAnh };
             return DataProvider.Instance.execNonSql(sql, prms) > 0;
         }
 
         public bool Save_3D(P3D p3D)
         {
-            string sql = "INSERT INTO InforFilm(MaDon, TenPhim, QuocGia, TheLoai, NgayCongChieu, DoTuoiQuyDinh, PTDacBiet) " +
-                 "VALUES (@MaDon, @TenPhim, @QuocGia, @TheLoai, @NgayCongChieu, @DoTuoiQuyDinh, @PTDacBiet )";
-            object[] prms = new object[] { p3D.maDon, p3D.tenPhim, p3D.quocGia, p3D.theLoai, p3D.ngayCongChieu, p3D.doTuoiQuiDinh, p3D.phuThuXuatChieuDacBiet };
+            string sql = "INSERT INTO InforFilm(MaDon, TenPhim, QuocGia, TheLoai, NgayCongChieu, DoTuoiQuyDinh, PTDacBiet, HinhAnh) " +
+                 "VALUES ( @MaDon, @TenPhim, @QuocGia, @TheLoai, @NgayCongChieu, @DoTuoiQuyDinh, @PTDacBiet, @HinhAnh )";
+            object[] prms = new object[] { p3D.maDon, p3D.tenPhim, p3D.quocGia, p3D.theLoai, p3D.ngayCongChieu, p3D.doTuoiQuiDinh, p3D.phuThuXuatChieuDacBiet, p3D.hinhAnh };
             return DataProvider.Instance.execNonSql(sql, prms) > 0;
         }
 

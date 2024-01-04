@@ -14,6 +14,7 @@ namespace OnTap_Test3.Model
         public string theLoai { get; set; }
         public DateTime ngayCongChieu { get; set; }
         public int doTuoiQuiDinh { get; set; }
+        public string hinhAnh { get; set; }
 
         public double GiaVe2D()
         {

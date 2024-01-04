@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.Data.SqlClient;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.IO;
+using OnTap_Test3.Model;
 
 namespace OnTap_Test3
 {
@@ -90,8 +92,8 @@ namespace OnTap_Test3
             try
             {
                 int tmp = Convert.ToInt32(txtDoTuoiQuiDinh.Text);
-                int pTGD = Convert.ToInt32(txtPTGheDoi.Text);
-                int pTDB = Convert.ToInt32(txtPTDB.Text);
+                //int pTGD = Convert.ToInt32(txtPTGheDoi.Text);
+                //int pTDB = Convert.ToInt32(txtPTDB.Text);
             }
             catch(Exception e) {
                 MessageBox.Show("Vui lòng nhập kiểu số !");
@@ -206,5 +208,32 @@ namespace OnTap_Test3
             MessageBox.Show("Đã xuất file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void btn_ChonHinhAnh_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+            openFileDialog.FilterIndex = 1;
+            openFileDialog.RestoreDirectory = true;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+                txtDuongDanHinh.Text = openFileDialog.FileName;
+        }
+
+        private byte[] converImgToByte()
+        {
+            FileStream fs;
+            fs = new FileStream(txtDuongDanHinh.Text, FileMode.Open, FileAccess.Read);
+            byte[] picByte = new byte[fs.Length];
+            fs.Read(picByte, 0, Convert.ToInt32(fs.Length));
+            fs.Close();
+            return picByte;
+        }
+
+        private void btn_ImgToByte_Click(object sender, EventArgs e)
+        {
+            txtImg_to_Bytes.Text = Convert.ToBase64String(converImgToByte());
+
+        }
     }
 }
+

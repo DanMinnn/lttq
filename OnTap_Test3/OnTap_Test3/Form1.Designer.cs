@@ -29,6 +29,7 @@ namespace OnTap_Test3
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblPTDB = new System.Windows.Forms.Label();
@@ -59,15 +60,22 @@ namespace OnTap_Test3
             this.colTenPhim = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTheLoai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colNgayCongChieu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnXuatExcel = new System.Windows.Forms.Button();
+            this.btnXuatBc = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSapXep = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.btnXuatExcel = new System.Windows.Forms.Button();
-            this.btnXuatBc = new System.Windows.Forms.Button();
+            this.btn_ChonHinhAnh = new System.Windows.Forms.Button();
+            this.txtDuongDanHinh = new System.Windows.Forms.TextBox();
+            this.btn_ImgToByte = new System.Windows.Forms.Button();
+            this.txtImg_to_Bytes = new System.Windows.Forms.TextBox();
+            this.lvHinhAnh = new System.Windows.Forms.ListView();
+            this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,7 +88,7 @@ namespace OnTap_Test3
             this.lblTieuDe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTieuDe.AutoSize = true;
             this.lblTieuDe.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDe.Location = new System.Drawing.Point(172, 42);
+            this.lblTieuDe.Location = new System.Drawing.Point(367, 42);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Size = new System.Drawing.Size(895, 37);
             this.lblTieuDe.TabIndex = 0;
@@ -108,7 +116,7 @@ namespace OnTap_Test3
             this.groupBox1.Controls.Add(this.lblMaDon);
             this.groupBox1.Controls.Add(this.lblPhuThuGheDoi);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(92, 114);
+            this.groupBox1.Location = new System.Drawing.Point(287, 114);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(664, 509);
             this.groupBox1.TabIndex = 1;
@@ -312,9 +320,10 @@ namespace OnTap_Test3
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.Controls.Add(this.lvHinhAnh);
             this.groupBox2.Controls.Add(this.lvPhim);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(613, 114);
+            this.groupBox2.Location = new System.Drawing.Point(808, 114);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(569, 522);
             this.groupBox2.TabIndex = 2;
@@ -327,12 +336,13 @@ namespace OnTap_Test3
             this.colMaDon,
             this.colTenPhim,
             this.colTheLoai,
-            this.colNgayCongChieu});
+            this.colNgayCongChieu,
+            this.colHA});
             this.lvPhim.FullRowSelect = true;
             this.lvPhim.HideSelection = false;
-            this.lvPhim.Location = new System.Drawing.Point(15, 21);
+            this.lvPhim.Location = new System.Drawing.Point(15, 45);
             this.lvPhim.Name = "lvPhim";
-            this.lvPhim.Size = new System.Drawing.Size(545, 481);
+            this.lvPhim.Size = new System.Drawing.Size(545, 202);
             this.lvPhim.TabIndex = 0;
             this.lvPhim.UseCompatibleStateImageBehavior = false;
             this.lvPhim.View = System.Windows.Forms.View.Details;
@@ -358,9 +368,16 @@ namespace OnTap_Test3
             this.colNgayCongChieu.Text = "Ngày công chiếu";
             this.colNgayCongChieu.Width = 150;
             // 
+            // colHA
+            // 
+            this.colHA.Text = "Hình ảnh";
+            this.colHA.Width = 150;
+            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox3.Controls.Add(this.btnXuatExcel);
+            this.groupBox3.Controls.Add(this.btnXuatBc);
             this.groupBox3.Controls.Add(this.btnXoa);
             this.groupBox3.Controls.Add(this.btnSapXep);
             this.groupBox3.Controls.Add(this.btnThongKe);
@@ -368,12 +385,34 @@ namespace OnTap_Test3
             this.groupBox3.Controls.Add(this.btnLuu);
             this.groupBox3.Controls.Add(this.btnThem);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(92, 676);
+            this.groupBox3.Location = new System.Drawing.Point(185, 676);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1090, 89);
+            this.groupBox3.Size = new System.Drawing.Size(1407, 89);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tác vụ";
+            // 
+            // btnXuatExcel
+            // 
+            this.btnXuatExcel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXuatExcel.Location = new System.Drawing.Point(1254, 35);
+            this.btnXuatExcel.Name = "btnXuatExcel";
+            this.btnXuatExcel.Size = new System.Drawing.Size(137, 39);
+            this.btnXuatExcel.TabIndex = 6;
+            this.btnXuatExcel.Text = "Xuất excel";
+            this.btnXuatExcel.UseVisualStyleBackColor = true;
+            this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
+            // 
+            // btnXuatBc
+            // 
+            this.btnXuatBc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXuatBc.Location = new System.Drawing.Point(1092, 35);
+            this.btnXuatBc.Name = "btnXuatBc";
+            this.btnXuatBc.Size = new System.Drawing.Size(137, 39);
+            this.btnXuatBc.TabIndex = 7;
+            this.btnXuatBc.Text = "Xuất BC";
+            this.btnXuatBc.UseVisualStyleBackColor = true;
+            this.btnXuatBc.Click += new System.EventHandler(this.btnXuatBc_Click);
             // 
             // btnXoa
             // 
@@ -435,34 +474,71 @@ namespace OnTap_Test3
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // btnXuatExcel
+            // btn_ChonHinhAnh
             // 
-            this.btnXuatExcel.Location = new System.Drawing.Point(1186, 382);
-            this.btnXuatExcel.Name = "btnXuatExcel";
-            this.btnXuatExcel.Size = new System.Drawing.Size(137, 39);
-            this.btnXuatExcel.TabIndex = 6;
-            this.btnXuatExcel.Text = "Xuất excel";
-            this.btnXuatExcel.UseVisualStyleBackColor = true;
-            this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
+            this.btn_ChonHinhAnh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_ChonHinhAnh.Location = new System.Drawing.Point(73, 186);
+            this.btn_ChonHinhAnh.Name = "btn_ChonHinhAnh";
+            this.btn_ChonHinhAnh.Size = new System.Drawing.Size(137, 39);
+            this.btn_ChonHinhAnh.TabIndex = 20;
+            this.btn_ChonHinhAnh.Text = "Chọn hình ảnh";
+            this.btn_ChonHinhAnh.UseVisualStyleBackColor = true;
+            this.btn_ChonHinhAnh.Click += new System.EventHandler(this.btn_ChonHinhAnh_Click_1);
             // 
-            // btnXuatBc
+            // txtDuongDanHinh
             // 
-            this.btnXuatBc.Location = new System.Drawing.Point(1188, 304);
-            this.btnXuatBc.Name = "btnXuatBc";
-            this.btnXuatBc.Size = new System.Drawing.Size(137, 39);
-            this.btnXuatBc.TabIndex = 7;
-            this.btnXuatBc.Text = "Xuất BC";
-            this.btnXuatBc.UseVisualStyleBackColor = true;
-            this.btnXuatBc.Click += new System.EventHandler(this.btnXuatBc_Click);
+            this.txtDuongDanHinh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDuongDanHinh.Location = new System.Drawing.Point(28, 254);
+            this.txtDuongDanHinh.Multiline = true;
+            this.txtDuongDanHinh.Name = "txtDuongDanHinh";
+            this.txtDuongDanHinh.Size = new System.Drawing.Size(218, 47);
+            this.txtDuongDanHinh.TabIndex = 21;
+            // 
+            // btn_ImgToByte
+            // 
+            this.btn_ImgToByte.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_ImgToByte.Location = new System.Drawing.Point(28, 339);
+            this.btn_ImgToByte.Name = "btn_ImgToByte";
+            this.btn_ImgToByte.Size = new System.Drawing.Size(218, 39);
+            this.btn_ImgToByte.TabIndex = 22;
+            this.btn_ImgToByte.Text = "Chuyển đổi hình ảnh sang byte";
+            this.btn_ImgToByte.UseVisualStyleBackColor = true;
+            this.btn_ImgToByte.Click += new System.EventHandler(this.btn_ImgToByte_Click);
+            // 
+            // txtImg_to_Bytes
+            // 
+            this.txtImg_to_Bytes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtImg_to_Bytes.Location = new System.Drawing.Point(28, 399);
+            this.txtImg_to_Bytes.Multiline = true;
+            this.txtImg_to_Bytes.Name = "txtImg_to_Bytes";
+            this.txtImg_to_Bytes.Size = new System.Drawing.Size(218, 217);
+            this.txtImg_to_Bytes.TabIndex = 23;
+            // 
+            // lvHinhAnh
+            // 
+            this.lvHinhAnh.HideSelection = false;
+            this.lvHinhAnh.Location = new System.Drawing.Point(15, 260);
+            this.lvHinhAnh.Name = "lvHinhAnh";
+            this.lvHinhAnh.Size = new System.Drawing.Size(545, 249);
+            this.lvHinhAnh.TabIndex = 1;
+            this.lvHinhAnh.UseCompatibleStateImageBehavior = false;
+            // 
+            // imgList
+            // 
+            this.imgList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imgList.ImageSize = new System.Drawing.Size(16, 16);
+            this.imgList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1335, 777);
-            this.Controls.Add(this.btnXuatBc);
-            this.Controls.Add(this.btnXuatExcel);
+            this.ClientSize = new System.Drawing.Size(1724, 777);
+            this.Controls.Add(this.txtImg_to_Bytes);
+            this.Controls.Add(this.btn_ImgToByte);
+            this.Controls.Add(this.btn_ChonHinhAnh);
+            this.Controls.Add(this.txtDuongDanHinh);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -526,6 +602,13 @@ namespace OnTap_Test3
         public System.Windows.Forms.ListView lvPhim;
         private System.Windows.Forms.Button btnXuatExcel;
         private System.Windows.Forms.Button btnXuatBc;
+        private System.Windows.Forms.Button btn_ChonHinhAnh;
+        public System.Windows.Forms.TextBox txtDuongDanHinh;
+        private System.Windows.Forms.Button btn_ImgToByte;
+        public System.Windows.Forms.TextBox txtImg_to_Bytes;
+        private System.Windows.Forms.ColumnHeader colHA;
+        public System.Windows.Forms.ListView lvHinhAnh;
+        public System.Windows.Forms.ImageList imgList;
     }
 }
 

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,20 +29,49 @@ namespace OnTap_Test3
         }
 
         public Business() { }
+        public Image converByteToImg(String byteString)
+        {
+            byte[] imgBytes = Convert.FromBase64String(byteString);
+            MemoryStream ms = new MemoryStream(imgBytes, 0, imgBytes.Length);
+            ms.Write(imgBytes, 0, imgBytes.Length);
+            Image image = Image.FromStream(ms, true);
+            return image;
+        }
 
         public void Xem(ListView lv)
         {
-            foreach(DataRow row in DAO.Instance.Xem().Rows)
+            Form1 f1 = Application.OpenForms.OfType<Form1>().FirstOrDefault();
+            
+            string base64ImageData = "";
+
+            foreach (DataRow row in DAO.Instance.Xem().Rows)
             {
+                base64ImageData = row["HinhAnh"].ToString();
+
                 ListViewItem item = new ListViewItem(row["MaDon"].ToString());
                 item.SubItems.Add(row["TenPhim"].ToString());
                 item.SubItems.Add(row["QuocGia"].ToString());
                 item.SubItems.Add(row["NgayCongChieu"].ToString());
-                item.SubItems.Add(row["PTGheDoi"].ToString());
-                item.SubItems.Add(row["PTDacBiet"].ToString());
 
                 lv.Items.Add(item);
+
             }
+
+            if (!string.IsNullOrEmpty(base64ImageData))
+            {
+                f1.imgList.Images.Add(converByteToImg(base64ImageData));
+                f1.imgList.ImageSize = new Size(24, 24);
+                f1.lvHinhAnh.View = View.LargeIcon;
+
+                for (int counter = 0; counter < f1.imgList.Images.Count; counter++)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.ImageIndex = counter;
+                    f1.lvHinhAnh.Items.Add(item);
+                }
+            }
+            f1.lvHinhAnh.LargeImageList = f1.imgList;
+
         }
 
         public void Luu()
@@ -67,6 +98,7 @@ namespace OnTap_Test3
                     p2D.theLoai = theLoai;
                     p2D.ngayCongChieu = f1.dtp_ncc.Value;
                     p2D.phuThuGheDoi = double.Parse(f1.txtPTGheDoi.Text);
+                    p2D.hinhAnh = f1.txtImg_to_Bytes.Text;
 
                     DAO.Instance.Save_2D(p2D);
 
@@ -94,6 +126,7 @@ namespace OnTap_Test3
                     p3D.theLoai = theLoai;
                     p3D.ngayCongChieu = f1.dtp_ncc.Value;
                     p3D.phuThuXuatChieuDacBiet = double.Parse(f1.txtPTDB.Text);
+                    p3D.hinhAnh = f1.txtImg_to_Bytes.Text;
 
                     DAO.Instance.Save_3D(p3D);
 
