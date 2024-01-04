@@ -1,0 +1,10 @@
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test3\OnTap_Test3\bin\Debug\OnTap_Test3.exe.config
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test3\OnTap_Test3\bin\Debug\OnTap_Test3.exe
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test3\OnTap_Test3\bin\Debug\OnTap_Test3.pdb
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test3\OnTap_Test3\obj\Debug\OnTap_Test3.csproj.AssemblyReference.cache
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test3\OnTap_Test3\obj\Debug\OnTap_Test3.Form1.resources
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test3\OnTap_Test3\obj\Debug\OnTap_Test3.Properties.Resources.resources
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test3\OnTap_Test3\obj\Debug\OnTap_Test3.csproj.GenerateResource.cache
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test3\OnTap_Test3\obj\Debug\OnTap_Test3.csproj.CoreCompileInputs.cache
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test3\OnTap_Test3\obj\Debug\OnTap_Test3.exe
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test3\OnTap_Test3\obj\Debug\OnTap_Test3.pdb
