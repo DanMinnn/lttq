@@ -1,0 +1,15 @@
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\bin\Debug\Test_EntityModel.exe.config
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\bin\Debug\Test_EntityModel.exe
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\bin\Debug\Test_EntityModel.pdb
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\obj\Debug\Test_EntityModel.csproj.AssemblyReference.cache
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\obj\Debug\Test_EntityModel.Properties.Resources.resources
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\obj\Debug\Test_EntityModel.csproj.GenerateResource.cache
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\obj\Debug\Test_EntityModel.csproj.CoreCompileInputs.cache
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\obj\Debug\Test_EntityModel.exe
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\obj\Debug\Test_EntityModel.pdb
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\bin\Debug\EntityFramework.dll
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\bin\Debug\EntityFramework.SqlServer.dll
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\bin\Debug\EntityFramework.xml
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\bin\Debug\EntityFramework.SqlServer.xml
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\obj\Debug\Test_EntityModel.Form1.resources
+F:\VS2019\Lập trình trực quan\Ôn tập\OnTap_Test_EntityModel\Test_EntityModel\Test_EntityModel\obj\Debug\Test_EntityModel.csproj.CopyComplete
