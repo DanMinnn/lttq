@@ -437,6 +437,7 @@ namespace Test_EntityModel
             this.btnSapXep.TabIndex = 4;
             this.btnSapXep.Text = "Sắp xếp";
             this.btnSapXep.UseVisualStyleBackColor = true;
+            this.btnSapXep.Click += new System.EventHandler(this.btnSapXep_Click);
             // 
             // btnThongKe
             // 

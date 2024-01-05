@@ -201,5 +201,22 @@ namespace Test_EntityModel
             lvPhim.Items.Clear();
             LoadListPhim();
         }
+
+        private void btnSapXep_Click(object sender, EventArgs e)
+        {
+            lvPhim.Items.Clear();
+
+            var sort = db.InforFilms.OrderBy(p => p.NgayCongChieu).ThenBy(p => p.DoTuoiQuyDinh).ToList();
+
+            foreach(var p in sort)
+            {
+                ListViewItem item = new ListViewItem(p.MaDon);
+                item.SubItems.Add(p.DoTuoiQuyDinh?.ToString());
+                item.SubItems.Add(p.TheLoai);
+                item.SubItems.Add(p.NgayCongChieu?.ToString("dd/MM/yyyy"));
+
+                lvPhim.Items.Add(item);
+            }
+        }
     }
 }
