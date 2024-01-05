@@ -1,0 +1,20 @@
+F:\VS2019\Lập trình trực quan\TestSQL\TestSQL\bin\Debug\TestSQL.exe.config
+F:\VS2019\Lập trình trực quan\TestSQL\TestSQL\bin\Debug\TestSQL.exe
+F:\VS2019\Lập trình trực quan\TestSQL\TestSQL\bin\Debug\TestSQL.pdb
+F:\VS2019\Lập trình trực quan\TestSQL\TestSQL\obj\Debug\TestSQL.csproj.AssemblyReference.cache
+F:\VS2019\Lập trình trực quan\TestSQL\TestSQL\obj\Debug\TestSQL.Form1.resources
+F:\VS2019\Lập trình trực quan\TestSQL\TestSQL\obj\Debug\TestSQL.Properties.Resources.resources
+F:\VS2019\Lập trình trực quan\TestSQL\TestSQL\obj\Debug\TestSQL.csproj.GenerateResource.cache
+F:\VS2019\Lập trình trực quan\TestSQL\TestSQL\obj\Debug\TestSQL.csproj.CoreCompileInputs.cache
+F:\VS2019\Lập trình trực quan\TestSQL\TestSQL\obj\Debug\TestSQL.exe
+F:\VS2019\Lập trình trực quan\TestSQL\TestSQL\obj\Debug\TestSQL.pdb
+F:\VS2019\Lập trình trực quan\BT trên lớp\TestSQL\TestSQL\bin\Debug\TestSQL.exe.config
+F:\VS2019\Lập trình trực quan\BT trên lớp\TestSQL\TestSQL\bin\Debug\TestSQL.exe
+F:\VS2019\Lập trình trực quan\BT trên lớp\TestSQL\TestSQL\bin\Debug\TestSQL.pdb
+F:\VS2019\Lập trình trực quan\BT trên lớp\TestSQL\TestSQL\obj\Debug\TestSQL.csproj.AssemblyReference.cache
+F:\VS2019\Lập trình trực quan\BT trên lớp\TestSQL\TestSQL\obj\Debug\TestSQL.Form1.resources
+F:\VS2019\Lập trình trực quan\BT trên lớp\TestSQL\TestSQL\obj\Debug\TestSQL.Properties.Resources.resources
+F:\VS2019\Lập trình trực quan\BT trên lớp\TestSQL\TestSQL\obj\Debug\TestSQL.csproj.GenerateResource.cache
+F:\VS2019\Lập trình trực quan\BT trên lớp\TestSQL\TestSQL\obj\Debug\TestSQL.csproj.CoreCompileInputs.cache
+F:\VS2019\Lập trình trực quan\BT trên lớp\TestSQL\TestSQL\obj\Debug\TestSQL.exe
+F:\VS2019\Lập trình trực quan\BT trên lớp\TestSQL\TestSQL\obj\Debug\TestSQL.pdb
